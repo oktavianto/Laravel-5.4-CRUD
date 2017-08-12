@@ -1,10 +1,8 @@
 <!-- create.blade.php -->
 @extends('layouts.app')
 @section('content')
-<div class="container">
-  <form method="post" action="{{url('guru')}}">
+  <form method="post" action="{{url('home')}}">
     <div class="form-group row">
-      php
       <label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Nama Guru</label>
       <div class="col-sm-10">
         <input type="text" class="form-control form-control-lg" id="lgFormGroupInput" placeholder="Nama Guru" name="nama_guru">
@@ -49,5 +47,4 @@
       <input type="submit" class="btn btn-primary">
     </div>
   </form>
-</div>
 @endsection

@@ -2,7 +2,6 @@
 
 @extends('layouts.app')
 @section('content')
-<div class="container">
 	<form method="post" action="{{action('GuruController@update', $id_guru)}}">
 		<div class="form-group row">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -50,5 +49,4 @@
 			<input type="submit" value="update" class="btn btn-primary">
 		</div>
 	</form>
-</div>
 @endsection

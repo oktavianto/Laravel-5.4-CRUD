@@ -16,8 +16,8 @@
       <tr>
         <td>{{$post['nip']}}</td>
         <td>{{$post['nama_guru']}}</td>
-        <td><a href="{{action('GuruController@edit', $post['id_guru'])}}" class="btn btn-warning">Edit</a></td>
-        <td><a href="{{action('GuruController@destroy', $post['id_guru'])}}" class="btn btn-danger">Delete</a></td>
+        <td><a href="{{action('GuruController@edit', $post['id_guru'])}}" class="btn btn-primary btn-block">Edit</a></td>
+        <td><a href="{{action('GuruController@destroy', $post['id_guru'])}}/delete" class="btn btn-danger btn-block">Delete</a></td>
       </tr>
       @endforeach
     </tbody>

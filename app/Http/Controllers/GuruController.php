@@ -34,7 +34,7 @@ class GuruController extends Controller
             ]);
             
             $guru->save();
-            return redirect('/guru');
+            return redirect('/home');
         }
         
         /**
@@ -69,11 +69,18 @@ class GuruController extends Controller
         */
         public function update(Request $request, $id)
         {
-            $crud = Crud::find($id);
-            $crud->title = $request->get('title');
-            $crud->post = $request->get('post');
+            $guru = Guru::find($id);
+            $guru->nama_guru = $request->get('nama_guru');
+            $guru->nip = $request->get('nip');
+            $guru->password = $request->get('password');
+            $guru->tempat_lahir = $request->get('tempat_lahir');
+            $guru->tanggal_lahir = $request->get('tanggal_lahir');
+            $guru->alamat = $request->get('alamat');
+            $guru->no_telp = $request->get('no_telp');
+            $guru->level = $request->get('level');
+            $guru->email = $request->get('email');
             $crud->save();
-            return redirect('/guru');
+            return redirect('/home');
         }
         
         /**
@@ -84,9 +91,9 @@ class GuruController extends Controller
         */
         public function destroy($id)
         {
-          $guru = Crud::find($id);
+          $guru = Guru::find($id);
           $guru->delete();
-          return redirect('/guru');
+          return redirect('/home');
         }
     }
     
