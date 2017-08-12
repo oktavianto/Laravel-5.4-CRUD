@@ -2,6 +2,8 @@
 @extends('layouts.app')
 @section('content')
   <div class="container-fluid">
+    <a href="{{url('/home/create')}}" class="btn btn-success btn-block">+ Add Guru</a>
+    <br>
     <table class="table table-striped table-responsive table-bordered">
     <thead>
       <tr>
