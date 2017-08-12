@@ -2,6 +2,7 @@
 @extends('layouts.app')
 @section('content')
   <form method="post" action="{{url('home')}}">
+  {{csrf_field()}}
     <div class="form-group row">
       <label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Nama Guru</label>
       <div class="col-sm-10">

@@ -17,6 +17,3 @@ Route::get('/', function () {
 
 Route::resource('/home','GuruController');
 Auth::routes();
-
-Route::put('/home/{id}', 'GuruController@update');
-Route::get('/home/{id}/delete', 'GuruController@destroy');

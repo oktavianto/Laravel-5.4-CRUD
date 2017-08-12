@@ -3,6 +3,8 @@
 @extends('layouts.app')
 @section('content')
 	<form method="post" action="{{action('GuruController@update', $id_guru)}}">
+	{{csrf_field()}}
+	<input name="_method" type="hidden" value="PATCH">
 		<div class="form-group row">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Nama Guru</label>
