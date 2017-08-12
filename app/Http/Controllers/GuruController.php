@@ -79,7 +79,7 @@ class GuruController extends Controller
             $guru->no_telp = $request->get('no_telp');
             $guru->level = $request->get('level');
             $guru->email = $request->get('email');
-            $crud->save();
+            $guru->save();
             return redirect('/home');
         }
         

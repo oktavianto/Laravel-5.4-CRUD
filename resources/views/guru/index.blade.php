@@ -17,7 +17,13 @@
         <td>{{$post['nip']}}</td>
         <td>{{$post['nama_guru']}}</td>
         <td><a href="{{action('GuruController@edit', $post['id_guru'])}}" class="btn btn-primary btn-block">Edit</a></td>
-        <td><a href="{{action('GuruController@destroy', $post['id_guru'])}}/delete" class="btn btn-danger btn-block">Delete</a></td>
+        <td>
+        <form action="{{action('GuruController@destroy', $post['id_guru'])}}" method="post">
+            {{csrf_field()}}
+            <input name="_method" type="hidden" value="DELETE">
+            <button class="btn btn-danger btn-block" type="submit">Delete</button>
+        </form>
+        </td>
       </tr>
       @endforeach
     </tbody>
