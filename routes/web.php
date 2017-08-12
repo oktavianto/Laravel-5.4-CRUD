@@ -15,4 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('guru','GuruController');
+Route::resource('/home','GuruController');
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');

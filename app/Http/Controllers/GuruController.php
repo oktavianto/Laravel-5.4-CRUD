@@ -22,8 +22,15 @@ class GuruController extends Controller
     public function store(Request $request)
     {
         $guru = new guru([
-            'title' => $request->get('title'),
-            'post' => $request->get('post')
+            'nama_guru' => $request->get('nama_guru'),
+            'nip' => $request->get('nip'),
+            'password' => $request->get('password'),
+            'tempat_lahir' => $request->get('tempat_lahir'),
+            'tanggal_lahir' => $request->get('tanggal_lahir'),
+            'alamat' => $request->get('alamat'),
+            'no_telp' => $request->get('no_telp'),
+            'level' => $request->get('level'),
+            'email' => $request->get('email')
             ]);
             
             $guru->save();

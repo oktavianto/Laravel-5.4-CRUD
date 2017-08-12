@@ -1,11 +1,11 @@
 <!-- edit.blade.php -->
 
-@extends('master')
+@extends('layouts.app')
 @section('content')
 <div class="container">
 	<form method="post" action="{{action('GuruController@update', $id_guru)}}">
 		<div class="form-group row">
-			{{csrf_field()}}
+		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Nama Guru</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control form-control-lg" id="lgFormGroupInput" value="{{$guru->nama_guru}}" name="nama_guru">

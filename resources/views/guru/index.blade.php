@@ -1,12 +1,14 @@
 <!-- index.blade.php -->
-@extends('master')
+@extends('layouts.app')
 @section('content')
-  <div class="container">
-    <table class="table table-striped">
+  <div class="container-fluid">
+    <table class="table table-striped table-responsive table-bordered">
     <thead>
       <tr>
         <th>NIP</th>
         <th>Nama Guru</th>
+        <th>Edit</th>
+        <th>Hapus</th>
       </tr>
     </thead>
     <tbody>

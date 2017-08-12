@@ -24,6 +24,8 @@ class CreateGuruTable extends Migration {
 			$table->string('no_telp', 14);
 			$table->string('level')->comment('1. kepsek, waka 2. walas 3. kaprog 4. guru');
 			$table->string('email', 40);
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
 		});
 	}
 

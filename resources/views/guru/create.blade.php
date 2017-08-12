@@ -1,11 +1,10 @@
 <!-- create.blade.php -->
-
-@extends('master')
+@extends('layouts.app')
 @section('content')
 <div class="container">
   <form method="post" action="{{url('guru')}}">
     <div class="form-group row">
-      {{csrf_field()}}
+      php
       <label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Nama Guru</label>
       <div class="col-sm-10">
         <input type="text" class="form-control form-control-lg" id="lgFormGroupInput" placeholder="Nama Guru" name="nama_guru">
